@@ -104,7 +104,7 @@ module.exports = {
 
   // getJobs method
   getJobs: function(req, res){
-    var userid = '786'+ req.params.id;
+    var userid = req.params.id;
     console.log('$$$$$$$$$$$')
     List.find({'deliverer_id': userid})
       .then(function(lists){

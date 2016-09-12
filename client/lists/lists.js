@@ -93,11 +93,7 @@ angular.module("crowdcart.lists", ["angularMoment"])
   //Add a job, update the deliverer id to user's id
   $scope.addJob = function(list) {
 
-    // Prefix 786 for all new jobs
-    // Note: Prior to this method.. deliverer_id = userid
-    // causing issues where every list was being displayed
-    // in My Jobs
-    list.deliverer_id = '786' + $scope.userid;
+    list.deliverer_id = $scope.userid;
 
     // Update DB list with new deliverer_id
     Lists.updateList(list)
