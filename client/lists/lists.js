@@ -191,7 +191,9 @@ angular.module("crowdcart.lists", ["angularMoment"])
   initialize();
 
   //Google map got initialize, set timeout for wating the list data to be loaded
-  google.maps.event.addDomListener(window, 'load', setTimeout($scope.mapInitialize, 500));
+  //NOT a problem with new google maps api (2019).  Commenting this out...
+  // google.maps.event.addDomListener(window, 'load', setTimeout($scope.mapInitialize, 500));
+  if (document.getElementById("map_canvas")) setTimeout($scope.mapInitialize, 500);
 })
 
 
