@@ -1,10 +1,11 @@
 {
   "name": "CrowdCart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shopping Web App",
   "author": "Team Dancing-Penguin",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
   },
   "license": "UNLICENSED",
   "private": true,
