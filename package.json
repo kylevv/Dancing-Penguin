@@ -1,6 +1,6 @@
 {
   "name": "CrowdCart",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shopping Web App",
   "author": "Team Dancing-Penguin",
   "scripts": {
@@ -25,16 +25,11 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
     "browser-sync": "^1.5.7",
-    "chai": "^3.4.1",
-    "clone-stats": "0.0.1",
     "express": "^4.4.5",
     "jwt-simple": "^0.2.0",
-    "mocha": "^2.3.4",
     "mongoose": "^4.1.0",
     "morgan": "^1.1.1",
-    "request": "^2.36.0",
-    "sinon": "^1.17.2",
-    "supertest": "^0.10.0"
+    "request": "^2.36.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",

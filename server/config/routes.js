@@ -1,35 +1,33 @@
-// require userHandler, listHandler
+var pkg = require('../../package.json')
 var userHandler = require('../users/userHandler.js')
 var listHandler = require('../lists/listHandler.js')
 
-// export function
 module.exports = function (app, express) {
-  // TODO:  Coordinate with frontend on
-  //        the request url names ('/api/...')
-
-  // POST - signin
   app.post('/api/signin', userHandler.signin)
-  // POST - signup
   app.post('/api/signup', userHandler.signup)
 
-  // POST - addList
+  // add single list
   app.post('/api/lists', listHandler.addList)
-  // GET - getList (single list)
+  // get single list
   app.get('/api/list/:id', listHandler.getOneList)
-  // GET - getLists (users lists)
+  // git all lists
   app.get('/api/lists/:id', listHandler.getLists)
-  // PUT - for updating list
+  // update single list
   app.put('/api/lists', listHandler.updateList)
-  // DELETE - deletes a single list
+  // delete single list
   app.delete('/api/lists/:id', listHandler.deleteList)
-  // GET - getAllLists
+  // get all lists
   app.get('/api/crowd', listHandler.getAllLists)
-  // GET - getJobs (users accepted jobs)
+
+  // get all of single user's accepted jobs
   app.get('/api/jobs/:id', listHandler.getJobs)
-  // POST - getJobs (user updates job when completed)
+  // update single job when complete
   app.post('/api/jobs', listHandler.updateJobStatus)
-  // POST - updateStatus (reflects when jobs/lists are assigned)
+  // update status of job/list when assigned
   app.post('/api/status', listHandler.updateStatus)
 
-  // Will probably need more routes over time
+  // identify current version of app
+  app.get('/version', function (req, res) {
+    res.json({ version: pkg.version })
+  })
 }

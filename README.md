@@ -18,17 +18,10 @@
 1. [Team](#team)
 1. [Contributing](#contributing)
 
-## Usage
-
-> Some usage instructions
-
 ## Requirements
 
-- Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+- Node
+- MongoDB
 
 ## Development
 
@@ -37,15 +30,12 @@
 From within the root directory:
 
 ```sh
-sudo npm install -g bower
 npm install
-bower install
 ```
-
-### Roadmap
-
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
-
+or
+```sh
+yarn
+```
 
 ## Contributing
 
